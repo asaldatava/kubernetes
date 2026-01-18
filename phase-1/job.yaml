@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: example-job
+  namespace: dev
+spec:
+  backoffLimit: 3
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: job
+          image: busybox
+          command: ["sh", "-c", "echo Hello from Job && sleep 5"]

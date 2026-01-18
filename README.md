@@ -31,7 +31,7 @@ kubectl apply -f namespace.yaml
 2. Run application
 ```
 kubectl apply -f deployment.yaml
-kubectl apply -f service.yaml
+kubectl apply -f cluster-ip.yaml
 kubectl apply -f job.yaml
 kubectl apply -f cronjob.yaml
 ```
